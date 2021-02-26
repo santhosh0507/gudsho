@@ -11,18 +11,16 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-
 public class Base_setup {
 
 	static public WebDriver driver;
 	public static Logger log = Logger.getLogger(Base_setup.class.getName());
-		
+
 	public static WebDriver intiliazedriver() throws IOException {
 		Properties prop = new Properties();
 		// FileInputStream fis=new
 		// FileInputStream(System.getProperty("user.dir")+"/src/main/java/Resource/baseproperties.properties");
-		FileInputStream fis = new FileInputStream(
-				"D:\\Automation\\UserEnd\\src\\main\\java\\com\\supportClass\\baseproperties.properties");
+		FileInputStream fis = new FileInputStream("baseproperties.properties");
 		prop.load(fis);
 		String browsername = prop.getProperty("browser");
 		String url = prop.getProperty("baseurl");
@@ -47,10 +45,9 @@ public class Base_setup {
 		log.info("driver initialized and maximized");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get(url);
-		log.info("entering in to "+url);
+		log.info("entering in to " + url);
 		return driver;
 
 	}
-	
 
 }
