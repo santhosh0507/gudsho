@@ -14,7 +14,7 @@ Scenario: Verify add to watchlist feature on home page
 	And verify that system is redirecting login page 
 	
 	
-@paywall
+@paywall1
 Scenario Outline: This test is to verify add to watchlist feature on sho detail page 
 	When search <searchName> sho or series or studio 
 	Then click on add to watchlist button from sho detail page 
@@ -36,7 +36,7 @@ Scenario Outline: This test is to verify add to watchlist feature on sho detail 
 		| Interstellar - English |
 		
 		
-@paywall		
+@paywall1	
 Scenario Outline: This test is to verify add to watchlist feature on studio detail page 
 	When search <searchName> sho or series or studio 
 	Then click on add to watchlist from flick page 
@@ -48,10 +48,10 @@ Scenario Outline: This test is to verify add to watchlist feature on studio deta
 	
 	Examples: 
 		| searchName |
-		| santii |
+		| S3antii's Studio |
 		
 
-@paywall
+@paywall1
 Scenario Outline: This test is to verify buy button feature on sho detail page  
 	When search <searchName> sho or series or studio 
 	Then click on buy button 
